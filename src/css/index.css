@@ -1,0 +1,118 @@
+* {
+  font-family: poppins, "sans-serif";
+  scroll-behavior: smooth;
+}
+
+:not(.ignore) {
+  font-size: 13.5px;
+}
+
+:root {
+  --primary: #145827;
+  --secondary: #fed82f;
+  --pale: #f4f4f4;
+  --white: #f9f9f9;
+  --text: #232227;
+  --placeholder: rgb(155, 155, 155);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.bg-pale {
+  background-color: var(--pale);
+}
+
+.bg-white {
+  background-color: var(--white);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.01);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-dark {
+  background-color: var(--text);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+.text-pale {
+  color: var(--pale);
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.text-placeholder {
+  color: var(--placeholder);
+}
+
+.text-main {
+  color: var(--text);
+}
+
+body {
+  background-color: var(--pale);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 120px);
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 98vw;
+  margin: 0 auto;
+}
+@media (min-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 180px);
+    gap: 1rem;
+    max-width: 800px;
+  }
+}
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.7s cubic-bezier(0.22, 1.5, 0.56, 1),
+    opacity 0.7s cubic-bezier(0.22, 1.5, 0.56, 1);
+  opacity: 1;
+  will-change: transform, opacity;
+  position: relative;
+  z-index: 1;
+}
+
+#booking-form input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+@media (max-width: 640px) {
+  #booking-modal .rounded-lg {
+    width: 95vw !important;
+    max-width: 98vw !important;
+    min-width: 0 !important;
+    padding: 1rem !important;
+    height: auto !important;
+  }
+}
+@media (min-width: 640px) {
+  #booking-modal .rounded-lg {
+    min-width: 35vw !important;
+  }
+}
+#navbar-menu {
+  transition: all 0.25s cubic-bezier(0.22, 1.5, 0.56, 1);
+}

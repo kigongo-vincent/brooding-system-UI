@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Kuku</title>
+
+    <!-- custom css  -->
+    <link rel="stylesheet" href="/src/css/index.css" />
+
+    <link rel="icon" type="image/png" href="/src/assets/icons/logo.png" />
+
+    <!-- tailwind cdn  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- poppins fonts link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- fa icons  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    />
+
+    <!-- Animate.css CDN for animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- js links  -->
+     <script src="/src/js/navbar.js" defer></script>
+     <script src="/src/js/typeWriter.js" defer></script>
+     <script src="/src/js/gallery.js" defer></script>
+     <script src="/src/js/features.js" defer></script>
+     <script src="/src/js/booking.js" defer></script>
+
+  </head>
+  <body>
+    <!-- navbar  -->
+    <nav class="h-[60px] bg-white px-3 py-2 flex items-center justify-between sticky top-0 z-50 shadow transition-shadow flex-wrap sm:flex-nowrap" id="main-navbar">
+      <!-- logo  -->
+      <div class="flex items-center space-x-3">
+        <img src="/src/assets/icons/logo.png" alt="" class="h-[60px]" />
+        <p class="font-bold text-primary uppercase">Smart Kuku Brooder</p>
+      </div>
+      <!-- Hamburger for mobile -->
+      <button id="navbar-toggle" class="sm:hidden flex items-center px-2 py-1 border rounded text-primary border-primary focus:outline-none">
+        <i class="fa fa-bars text-2xl"></i>
+      </button>
+      <!-- nav menu  -->
+      <div id="navbar-menu" class="hidden sm:flex flex-col sm:flex-row sm:items-center space-y-4 sm:space-y-0 space-x-0 sm:space-x-6 text-sm sm:text-base absolute sm:static top-[60px] left-0 w-full sm:w-auto bg-white sm:bg-transparent shadow sm:shadow-none z-40 sm:z-auto transition-all duration-300 ease-out opacity-0 sm:opacity-100 transform sm:transform-none scale-95 sm:scale-100">
+        <a href="#hero" class="block px-4 py-2 sm:p-0">Home</a>
+        <a href="#about" class="block px-4 py-2 sm:p-0">About Us</a>
+        <a href="#contact" class="block px-4 py-2 sm:p-0">Contact Us</a>
+        <!-- contact us button for mobile only -->
+        <button id="open-booking-form-mobile" class="bg-primary text-white px-5 py-2 rounded-full sm:hidden mx-4 mb-2">Book Now</button>
+      </div>
+      <!-- contact us button for desktop -->
+      <button id="open-booking-form" class="bg-primary text-white px-5 py-2 rounded-full hidden sm:block">
+        Book Now
+      </button>
+    </nav>
+
+    
+
+    <!-- hero section  -->
+    <section
+      id="hero"
+      class="relative flex flex-col sm:flex-row bg-[url('/src/assets/images/bg.jpeg')] bg-cover bg-no-repeat justify-between h-[40vh] sm:h-[40vh] px-2 sm:px-0"
+      style="background-attachment: fixed;"
+    >
+      <div
+        class="absolute bottom-[-5%] left-1/2 rounded p-3 sm:p-6 transform -translate-x-1/2 bg-white z-20 flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3 items-center justify-center w-full sm:w-auto max-w-[95vw]"
+      >
+        <a
+          href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          target="_blank"
+          rel="noopener"
+          class="items-center justify-center bg-pale rounded px-4 py-2 space-x-3 flex w-full sm:w-auto"
+        >
+          <i class="fa fa-video-camera" aria-hidden="true"></i>
+          <p>Watch instructional video on usage</p>
+        </a>
+        <button
+          id="open-booking-form"
+          class="items-center justify-center border border-green-600 rounded px-4 py-2 space-x-3 text-primary flex w-full sm:w-auto"
+        >
+          <p>Reach us now for a booking</p>
+        </button>
+      </div>
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-dark opacity-70"></div>
+      <div
+        class="relative p-4  h-full sm:p-10 z-10 text-center w-full flex items-center justify-center flex-col text-white"
+      >
+        <p id="hero-title" class="text-3xl sm:text-5xl ignore font-bold text-white">
+          SMART BROODING
+        </p>
+        <p id="hero-subtitle" class="mt-3 sm:mt-5 text-base sm:text-lg"></p>
+      </div>
+    </section>
+
+ 
+
+    <!-- about us section  -->
+    <section
+      id="about"
+      class="p-3 sm:p-5 mt-8 text-center flex flex-col items-center"
+    >
+      <div class="relative w-full flex flex-col items-center">
+        <h3 class="text-3xl font-bold ignore my-5">Why Smart Kuku?</h3>
+        <div
+          class="absolute left-1/2 bottom-[15%] transform -translate-x-1/2 translate-y-1/2"
+        >
+          <div class="bg-yellow-400 rounded-full h-1 w-32"></div>
+        </div>
+      </div>
+      <div class="w-full sm:w-[50vw] mt-[2rem] sm:mt-[3rem] text-center px-2">
+        <p>
+          The smart kuku Brooder System is a game changer for Ugandan Poultry
+          farmers. With its key features it ensures that an ideal environment
+          for chicken rearing, reducing mortality rates and enhancing growth
+        </p>
+        <p class="mt-2">
+          Invest in smarter, more sustainable feature for your poultry business
+          with us powered by sustainable solar energy
+        </p>
+      </div>
+    </section>
+
+    <!-- gallery section  -->
+    <section class="p-3 sm:p-5 mt-5">
+      <h3 class="font-bold ignore text-center text-2xl sm:text-3xl">Gallery</h3>
+      <div class="rounded p-2 sm:p-5">
+        
+        <div class="gallery-grid" id="gallery-grid">
+          <img
+            class="gallery-img"
+            src="/src/assets/images/product/1.jpeg"
+            alt="Product 1"
+          />
+          <img
+            class="gallery-img"
+            src="/src/assets/images/product/2.jpeg"
+            alt="Product 2"
+          />
+          <img
+            class="gallery-img"
+            src="/src/assets/images/product/3.jpeg"
+            alt="Product 3"
+          />
+          <img
+            class="gallery-img"
+            src="/src/assets/images/product/4.jpeg"
+            alt="Product 4"
+          />
+          <img
+            class="gallery-img"
+            src="/src/assets/images/product/5.jpeg"
+            alt="Product 5"
+          />
+          <img
+            class="gallery-img"
+            src="/src/assets/images/product/6.jpeg"
+            alt="Product 6"
+          />
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- features section  -->
+    <h3 class="font-bold ignore text-2xl sm:text-3xl text-center mb-4">Features</h3>
+    <section
+      class="w-full sm:w-[90vw] max-w-none mx-auto mt-6 sm:mt-10 flex flex-col sm:flex-row rounded-xl overflow-hidden h-auto sm:h-[340px] bg-white"
+    >
+      <!-- Image on the left -->
+      <div
+        id="features-img"
+        class="h-[180px] sm:h-full w-full sm:w-1/2 bg-cover bg-center transition-all duration-700"
+      ></div>
+      <!-- Text and controls on the right -->
+      <div class="relative flex flex-col justify-between w-full sm:w-1/2 p-4 sm:p-8 bg-white">
+        <div>
+          <i
+            id="feature-icon"
+            class="fa text-primary text-3xl sm:text-4xl ignore mb-3 block"
+          ></i>
+          <h4 id="feature-title" class="text-xl sm:text-2xl ignore font-bold mb-2"></h4>
+          <p id="feature-desc" class="text-base"></p>
+        </div>
+        <!-- Prev/Next buttons at bottom right -->
+        <div class="flex space-x-3 mt-4 sm:absolute sm:bottom-6 sm:right-8">
+          <button
+            id="feature-prev"
+            class="bg-primary bg-opacity-80 hover:bg-opacity-100 text-white rounded-full px-4 py-2 flex items-center justify-center shadow-lg transition text-sm sm:text-base"
+            aria-label="Previous feature"
+          >
+            <i class="fa fa-chevron-left mr-2"></i>
+            Prev
+          </button>
+          <button
+            id="feature-next"
+            class="bg-pale bg-opacity-80 hover:bg-opacity-100 rounded-full px-4 py-2 flex items-center justify-center transition text-sm sm:text-base"
+            aria-label="Next feature"
+          >
+            Next
+            <i class="fa fa-chevron-right ml-2"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer  -->
+    <footer id="contact" class="bg-primary text-white py-8 sm:py-12 mt-10 sm:mt-16">
+      <div class="container mx-auto px-3 sm:px-6 flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0">
+        <!-- Brand and tagline -->
+        <div class="mb-8 md:mb-0">
+          <div class="flex items-center mb-2">
+            <span class="text-kuku-gold text-3xl mr-2">
+              <img src="/src/assets/icons/logo.png" class="h-[50px] filter invert brightness-0" style="mix-blend-mode:lighten;" alt="">
+            </span>
+            <h1 class="text-2xl font-bold">Smart Kuku Brooder</h1>
+          </div>
+          <p class="text-kuku-gold text-base max-w-xs opacity-40"">
+            Revolutionizing poultry farming in Uganda with smart, solar-powered brooding systems.
+          </p>
+        </div>
+        <!-- Contact Info -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4 text-kuku-gold">Contact Us</h3>
+          <ul class="space-y-3 text-base">
+            <li class="flex items-center">
+              <i class="fa fa-envelope mr-3 text-kuku-gold"></i>
+              <a href="mailto:smartkukuug@gmail.com" class="hover:underline">smartkukuug@gmail.com</a>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-phone mr-3 text-kuku-gold"></i>
+              <a href="tel:+256701234567" class="hover:underline">+256 701 234567</a>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-facebook-official mr-3 text-kuku-gold"></i>
+              <a href="https://facebook.com/smartkukuug" target="_blank" class="hover:underline">facebook.com/smartkukuug</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Call to Action -->
+        <div class="mt-8 md:mt-0">
+          <a
+            href="#"
+            id="open-booking-form"
+            class="border font-bold py-3 px-8 rounded inline-block transition duration-300"
+            >
+            <i class="fa fa-calendar mr-2"></i>
+            Book Now
+          </a>
+        </div>
+      </div>
+
+      <hr class="my-3 opacity-10">
+      <div class="container mx-auto px-6 mt-10 text-center text-kuku-gold text-sm">
+        <p>&copy; 2025 Smart Kuku Brooder. All rights reserved.</p>
+        <p class="mt-2 text-white">Contact us for more information or to book</p>
+      </div>
+    </footer>
+
+    <!-- WhatsApp FAB -->
+    <a
+      href="https://wa.me/256701234567"
+      target="_blank"
+      aria-label="Chat with us on WhatsApp"
+      class="fixed bottom-4 right-4 z-50 text-white rounded-full flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 transition-all animate__animated animate__bounceIn"
+      style="box-shadow: 0 4px 24px rgba(0,0,0,0.18);"
+    >
+      <!-- <i class="fa fa-whatsapp text-primary ignore text-5xl"></i> -->
+       <img class="h[20px]" src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20version='1.1'%20width='256'%20height='256'%20viewBox='0%200%20256%20256'%20xml:space='preserve'%3e%3cdefs%3e%3c/defs%3e%3cg%20style='stroke:%20none;%20stroke-width:%200;%20stroke-dasharray:%20none;%20stroke-linecap:%20butt;%20stroke-linejoin:%20miter;%20stroke-miterlimit:%2010;%20fill:%20none;%20fill-rule:%20nonzero;%20opacity:%201;'%20transform='translate(1.4065934065934016%201.4065934065934016)%20scale(2.81%202.81)'%20%3e%3ccircle%20cx='45'%20cy='45'%20r='45'%20style='stroke:%20none;%20stroke-width:%201;%20stroke-dasharray:%20none;%20stroke-linecap:%20butt;%20stroke-linejoin:%20miter;%20stroke-miterlimit:%2010;%20fill:%20rgb(42,181,64);%20fill-rule:%20nonzero;%20opacity:%201;'%20transform='%20matrix(1%200%200%201%200%200)%20'/%3e%3cpath%20d='M%2016.138%2044.738%20c%20-0.002%205.106%201.332%2010.091%203.869%2014.485%20l%20-4.112%2015.013%20l%2015.365%20-4.029%20c%204.233%202.309%208.999%203.525%2013.85%203.527%20h%200.012%20c%2015.973%200%2028.976%20-12.999%2028.983%20-28.974%20c%200.003%20-7.742%20-3.01%20-15.022%20-8.481%20-20.498%20c%20-5.472%20-5.476%20-12.749%20-8.494%20-20.502%20-8.497%20C%2029.146%2015.765%2016.145%2028.762%2016.138%2044.738%20M%2025.288%2058.466%20l%20-0.574%20-0.911%20c%20-2.412%20-3.834%20-3.685%20-8.266%20-3.683%20-12.816%20c%200.005%20-13.278%2010.811%20-24.081%2024.099%20-24.081%20c%206.435%200.003%2012.482%202.511%2017.031%207.062%20c%204.548%204.552%207.051%2010.603%207.05%2017.037%20C%2069.205%2058.036%2058.399%2068.84%2045.121%2068.84%20h%20-0.009%20c%20-4.323%20-0.003%20-8.563%20-1.163%20-12.261%20-3.357%20l%20-0.88%20-0.522%20l%20-9.118%202.391%20L%2025.288%2058.466%20z%20M%2045.122%2073.734%20L%2045.122%2073.734%20L%2045.122%2073.734%20C%2045.122%2073.734%2045.121%2073.734%2045.122%2073.734'%20style='stroke:%20none;%20stroke-width:%201;%20stroke-dasharray:%20none;%20stroke-linecap:%20butt;%20stroke-linejoin:%20miter;%20stroke-miterlimit:%2010;%20fill:%20rgb(255,255,255);%20fill-rule:%20nonzero;%20opacity:%201;'%20transform='%20matrix(1%200%200%201%200%200)%20'%20stroke-linecap='round'%20/%3e%3cpath%20d='M%2037.878%2032.624%20c%20-0.543%20-1.206%20-1.113%20-1.23%20-1.63%20-1.251%20c%20-0.422%20-0.018%20-0.905%20-0.017%20-1.388%20-0.017%20c%20-0.483%200%20-1.268%200.181%20-1.931%200.906%20c%20-0.664%200.725%20-2.535%202.477%20-2.535%206.039%20c%200%203.563%202.595%207.006%202.957%207.49%20c%200.362%200.483%205.01%208.028%2012.37%2010.931%20c%206.118%202.412%207.362%201.933%208.69%201.812%20c%201.328%20-0.121%204.285%20-1.751%204.888%20-3.442%20c%200.604%20-1.691%200.604%20-3.14%200.423%20-3.443%20c%20-0.181%20-0.302%20-0.664%20-0.483%20-1.388%20-0.845%20c%20-0.724%20-0.362%20-4.285%20-2.114%20-4.948%20-2.356%20c%20-0.664%20-0.241%20-1.147%20-0.362%20-1.63%200.363%20c%20-0.483%200.724%20-1.87%202.355%20-2.292%202.838%20c%20-0.422%200.484%20-0.845%200.544%20-1.569%200.182%20c%20-0.724%20-0.363%20-3.057%20-1.127%20-5.824%20-3.594%20c%20-2.153%20-1.92%20-3.606%20-4.29%20-4.029%20-5.015%20c%20-0.422%20-0.724%20-0.045%20-1.116%200.318%20-1.477%20c%200.325%20-0.324%200.724%20-0.846%201.087%20-1.268%20c%200.361%20-0.423%200.482%20-0.725%200.723%20-1.208%20c%200.242%20-0.483%200.121%20-0.906%20-0.06%20-1.269%20C%2039.929%2037.637%2038.522%2034.056%2037.878%2032.624'%20style='stroke:%20none;%20stroke-width:%201;%20stroke-dasharray:%20none;%20stroke-linecap:%20butt;%20stroke-linejoin:%20miter;%20stroke-miterlimit:%2010;%20fill:%20rgb(255,255,255);%20fill-rule:%20nonzero;%20opacity:%201;'%20transform='%20matrix(1%200%200%201%200%200)%20'%20stroke-linecap='round'%20/%3e%3c/g%3e%3c/svg%3e" alt="">
+    </a>
+
+  
+    <!-- end features section -->
+
+    <script>
+      
+    </script>
+
+    <!-- modals  -->
+     <div id="booking-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-[rgba(0,0,0,.5)] bg-opacity-60 hidden">
+      <!-- Modal overlay background is already handled by parent div -->
+      <div class="bg-white rounded-lg shadow h-auto w-[95vw] max-w-xs sm:h-[50vh] sm:w-[35vw] min-w-0 sm:min-w-[35vw] flex items-center flex-col justify-end p-4 sm:p-8 relative animate__animated">
+        <button id="close-booking-form" class="absolute top-3 right-3 text-gray-500 text-4xl ignore">&times;</button>
+        <h2 class="text-2xl ignore mb-4 text-primary text-center">Book a Smart Kuku Brooder</h2>
+        <form id="booking-form" class="space-y-4 w-full">
+          <div class="w-full">
+            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Enter your full name"
+              class="mt-1 block w-full border border-gray-300 rounded px-3 py-3 focus:outline-none placeholder-gray-400"
+            />
+          </div>
+          <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              placeholder="e.g. +256 701 234567"
+              class="mt-1 block w-full border border-gray-300 rounded px-3 py-3 focus:outline-none placeholder-gray-400"
+            />
+          </div>
+          <div>
+            <label for="quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              min="1"
+              required
+              placeholder="How many brooders?"
+              class="mt-1 block w-full border border-gray-300 rounded px-3 py-3 focus:outline-none placeholder-gray-400"
+            />
+          </div>
+          <button type="submit" class="w-full bg-primary text-white py-3 rounded  transition">Submit Booking</button>
+          <p id="booking-success" class="hidden text-green-500 text-center mt-2">Thank you! Your booking has been received.</p>
+        </form>
+      </div>
+</div>
+  </body>
+</html>
